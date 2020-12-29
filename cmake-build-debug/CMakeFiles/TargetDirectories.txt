@@ -1,3 +1,0 @@
-/home/fredericksimard/Dev/C++/Chess/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/fredericksimard/Dev/C++/Chess/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/fredericksimard/Dev/C++/Chess/cmake-build-debug/CMakeFiles/Chess.dir
