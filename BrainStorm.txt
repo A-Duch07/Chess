@@ -4,6 +4,10 @@ Possible classes for the game:
     
     2- AbsPiece
         Abstract class containing base methods of piece such as move and die
+		
+	- string id;
+	- Graphe moves possibles;
+	- int value;
     
     3- Pawn
         This class inherits from the AbsPiece class

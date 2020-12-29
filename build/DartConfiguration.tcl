@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: C:/dev/Chess
-BuildDirectory: C:/dev/Chess/build
+SourceDirectory: C:/Users/Anthony/Documents/GitRepos/Personal/Chess
+BuildDirectory: C:/Users/Anthony/Documents/GitRepos/Personal/Chess/build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: DESKTOP-9U87FJM
+Site: DESKTOP-FCR1EDP
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Win32-mingw32-make
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/dev/Chess"
+ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Users/Anthony/Documents/GitRepos/Personal/Chess"
 MakeCommand: C:/Program\ Files/CMake/bin/cmake.exe --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
@@ -62,7 +62,7 @@ UpdateOptions:
 UpdateType: git
 
 # Compiler info
-Compiler: C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/i686-w64-mingw32-g++.exe
+Compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/x86_64-w64-mingw32-g++.exe
 CompilerVersion: 8.1.0
 
 # Dynamic analysis (MemCheck)
@@ -80,7 +80,7 @@ MemoryCheckCommandOptions:
 MemoryCheckSuppressionFile: 
 
 # Coverage
-CoverageCommand: C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcov.exe
+CoverageCommand: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcov.exe
 CoverageExtraFlags: -l
 
 # Cluster commands

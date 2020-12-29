@@ -300,8 +300,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/dev/Chess/build",
-		"source" : "C:/dev/Chess"
+		"build" : "C:/Users/Anthony/Documents/GitRepos/Personal/Chess/build",
+		"source" : "C:/Users/Anthony/Documents/GitRepos/Personal/Chess"
 	},
 	"version" : 
 	{
