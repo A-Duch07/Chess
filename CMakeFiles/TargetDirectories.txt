@@ -1,0 +1,3 @@
+/home/fredericksimard/Dev/C++/Chess/CMakeFiles/rebuild_cache.dir
+/home/fredericksimard/Dev/C++/Chess/CMakeFiles/edit_cache.dir
+/home/fredericksimard/Dev/C++/Chess/CMakeFiles/Chess.dir
