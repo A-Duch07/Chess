@@ -5,7 +5,7 @@ Chess game
 
 Reinstall the mgwin(compatibility issue with this program): http://www.mingw.org/wiki/Getting_Started <br>
 Once you are on that link, find in the page mingw-get-setup.exe and click on it. After downloading it, execute it and install everything <br>
-After that, set the environnement variables
+After that, set the environnement variables (C:\MinGW\bin)
 
 
 First download SDL2 on this website: https://www.libsdl.org/download-2.0.php <br>
