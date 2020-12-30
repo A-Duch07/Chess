@@ -1,31 +1,18 @@
 #define SDL_MAIN_HANDLED
 #include <iostream>
- 
-#include "SDL2/SDL.h"
+#include "view/Game.h"
 
 int main(int argc, char *argv[]) {
     std::cout << "Hello, World!sddsdsdsdsds" << std::endl;
-    
-    SDL_Init(SDL_INIT_VIDEO);
+    Game* game = new Game();
 
-  SDL_Window *window = SDL_CreateWindow(
-    "SDL2Test",
-    SDL_WINDOWPOS_UNDEFINED,
-    SDL_WINDOWPOS_UNDEFINED,
-    640,
-    480,
-    0
-  );
+    game->initScreen("Chess game,", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
 
-  SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
-  SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-  SDL_RenderClear(renderer);
-  SDL_RenderPresent(renderer);
 
-  SDL_Delay(3000);
-
-  SDL_DestroyWindow(window);
-  SDL_Quit();
-
-  return 0;
+    while (game->running()) {
+        game->handleEvents();
+        game->update();
+        game->render();
+    }
+    game->clean();
 }
