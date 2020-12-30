@@ -6,6 +6,7 @@
 *.exe
 *.sh
 build
+cmake-build-debug
 
 ### CMake ###
 CMakeLists.txt.user
