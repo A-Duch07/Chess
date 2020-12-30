@@ -1,6 +1,7 @@
 #define SDL_MAIN_HANDLED
 #include <iostream>
-#include <SDL2/SDL.h>
+ 
+#include "SDL2/SDL.h"
 
 int main(int argc, char *argv[]) {
     std::cout << "Hello, World!sddsdsdsdsds" << std::endl;
@@ -10,7 +11,7 @@ int main(int argc, char *argv[]) {
   SDL_Window *window = SDL_CreateWindow(
     "SDL2Test",
     SDL_WINDOWPOS_UNDEFINED,
-    SDL_WINDOWPOS_UNDEFINED, 
+    SDL_WINDOWPOS_UNDEFINED,
     640,
     480,
     0
