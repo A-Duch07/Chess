@@ -7,6 +7,8 @@
 *.sh
 build
 cmake-build-debug
+/.idea
+/.vscode
 
 ### CMake ###
 CMakeLists.txt.user
