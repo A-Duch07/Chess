@@ -1,0 +1,39 @@
+Possible classes for the game:
+    1- Player
+        Stores the information about time and move history
+    
+    2- AbsPiece
+        Abstract class containing base methods of piece such as move and die
+		
+	- string id;
+	- Graphe moves possibles;
+	- int value;
+    
+    3- Pawn
+        This class inherits from the AbsPiece class
+        Defines the general methods found in AbsPiece to match the constraints of a Pawn
+    
+    4- Rook
+        This class inherits from the AbsPiece class
+        Defines the general methods found in AbsPiece to match the constraints of a Rook
+            
+    5- Knight
+        This class inherits from the AbsPiece class
+        Defines the general methods found in AbsPiece to match the constraints of a Knight
+                    
+    6- Bishop
+        This class inherits from the AbsPiece class
+        Defines the general methods found in AbsPiece to match the constraints of a Knight
+                    
+    7- Queen
+        This class inherits from the AbsPiece class
+        Defines the general methods found in AbsPiece to match the constraints of a Queen            
+    
+    8- King
+        This class inherits from the AbsPiece class
+        Defines the general methods found in AbsPiece to match the constraints of a Knight
+             
+    9- Main
+        Runs until one of the two king has been captured. 
+        Let's the players play on a turn based system with a time constraint
+
