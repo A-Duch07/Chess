@@ -18,3 +18,8 @@ First download SDL2 on this website: https://www.libsdl.org/download-2.0.php <br
 
 After doing that, if visual studio is open, close it and reopen it and change the compiler to the one we installed earlier. <br>
 When it's done, use the cmake tool, config and build and everything should work!
+
+
+## Install SDL2 with Linux
+
+On ubuntu based distro, simply install the library: sudo apt install cmake libsdl2-dev g++
