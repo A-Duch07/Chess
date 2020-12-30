@@ -28,7 +28,7 @@ set(CPACK_IGNORE_FILES "/CVS/;/\\.svn/;/\\.bzr/;/\\.hg/;/\\.git/;\\.swp\$;\\.#;/
 set(CPACK_INSTALLED_DIRECTORIES "C:/dev/Chess;/")
 set(CPACK_INSTALL_CMAKE_PROJECTS "")
 set(CPACK_INSTALL_PREFIX "C:/Program Files (x86)/Chess")
-set(CPACK_MODULE_PATH "")
+set(CPACK_MODULE_PATH "C:/dev/Chess/cmake/")
 set(CPACK_NSIS_DISPLAY_NAME "Chess 0.1.0")
 set(CPACK_NSIS_INSTALLER_ICON_CODE "")
 set(CPACK_NSIS_INSTALLER_MUI_ICON_CODE "")
