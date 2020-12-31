@@ -31,7 +31,7 @@ void Game::initScreen(const char *title, int posX, int posY, int width, int heig
         if (!renderer) {
             std::cout << "Error with the renderer" << std::endl;
         }
-        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
         isRunning = true;
     } else {
         std::cout << "Error : " << SDL_GetError() << std::endl;
