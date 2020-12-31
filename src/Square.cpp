@@ -1,5 +1,7 @@
 #include "Square.h"
 
+Square::Square(bool isTaken, int row, char col) : isTaken_(isTaken), row_(row), col_(col){}
+
 bool Square::GetAvailability(){
     return isTaken_;
 }
@@ -10,6 +12,10 @@ int Square::GetRow(){
 
 char Square::GetCol(){
     return col_;
+}
+
+std::string Square::GetPosition(){
+    return std::to_string(GetCol() + GetRow());
 }
 
 void Square::SetAvailability(bool isTaken) {

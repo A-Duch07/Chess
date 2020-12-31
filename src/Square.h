@@ -6,11 +6,16 @@
 #define CHESS_SQUARE_H
 #define SDL_MAIN_HANDLED
 
+#include <string>
+
 class Square{
     public:
+        Square(bool isTaken, int row, char col);
+
         bool GetAvailability();
         int GetRow();
         char GetCol();
+        std::string GetPosition();
 
         void SetAvailability(bool isTaken);
         void SetRow(int row);
