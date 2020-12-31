@@ -68,3 +68,7 @@ void Game::clean() {
     SDL_Quit();
     std::cout << "Exit." << std::endl;
 }
+
+bool Game::running() { 
+    return isRunning;
+}

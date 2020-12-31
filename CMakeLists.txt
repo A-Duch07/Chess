@@ -9,7 +9,7 @@ find_package(SDL2 REQUIRED)
 set(SDL2_LIBRARIES ${SDL2_LIBRARY})
 include_directories(${SDL2_INCLUDE_DIRS})
 
-add_executable(Chess WIN32 src/main.cpp src/view/Game.cpp src/view/Game.h)
+add_executable(Chess WIN32 src/main.cpp src/view/Game.cpp src/view/Game.h src/Pieces/AbsPiece.cpp src/Pieces/AbsPiece.h src/Graph/Graph.cpp src/Graph/Graph.h src/Graph/Node.cpp src/Graph/Node.h src/Graph/Arc.cpp src/Graph/Arc.h)
 target_link_libraries(Chess ${SDL2_LIBRARIES})
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
