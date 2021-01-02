@@ -7,6 +7,7 @@
 #define SDL_MAIN_HANDLED
 
 #include <string>
+#include <../Pieces/A
 
 class Square{
     public:
