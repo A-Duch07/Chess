@@ -6,26 +6,26 @@
 #define CHESS_SQUARE_H
 #define SDL_MAIN_HANDLED
 
+class AbsPiece;
+
 #include <string>
-#include <../Pieces/A
+#include "Pieces/AbsPiece.h"
 
 class Square{
     public:
-        Square(bool isTaken, int row, char col);
+        Square(const AbsPiece& piece, int row, int col);
 
-        bool GetAvailability();
-        int GetRow();
-        char GetCol();
-        std::string GetPosition();
-
-        void SetAvailability(bool isTaken);
-        void SetRow(int row);
-        void SetCol(char col);
+        bool GetAvailability() const;
+        int GetRow() const;
+        char GetCol() const;
+        std::string GetPosition() const;
         
     private:
-        bool isTaken_;
+        AbsPiece *piece_;
         int row_;
-        char col_;
+        int col_;
+        char *id_;
+
 };
 
 

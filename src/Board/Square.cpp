@@ -1,31 +1,21 @@
 #include "Square.h"
 
-Square::Square(bool isTaken, int row, char col) : isTaken_(isTaken), row_(row), col_(col){}
+Square::Square(const AbsPiece& piece, int row, int col) : piece_(nullptr), row_(row), col_(col) {
 
-bool Square::GetAvailability(){
-    return isTaken_;
 }
 
-int Square::GetRow(){
+bool Square::GetAvailability() const{
+    return piece_!= nullptr;
+}
+
+int Square::GetRow() const{
     return row_;
 }
 
-char Square::GetCol(){
+char Square::GetCol() const{
     return col_;
 }
 
-std::string Square::GetPosition(){
+std::string Square::GetPosition() const{
     return std::to_string(GetCol() + GetRow());
-}
-
-void Square::SetAvailability(bool isTaken) {
-    isTaken_ = isTaken;
-}
-
-void Square::SetRow(int row){
-    row_ = row;
-}
-
-void Square::SetCol(char col){
-    col_ = col;
 }

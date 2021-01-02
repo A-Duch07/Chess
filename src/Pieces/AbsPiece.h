@@ -5,21 +5,26 @@
 #ifndef CHESS_ABSPIECE_H
 #define CHESS_ABSPIECE_H
 
-#include "../Graph/Graph.h"
+class Tree;
+class Square;
+
+#include "Tree/Tree.h"
 #include <string>
 #include <unordered_map>
 
 
 class AbsPiece {
 public:
-    virtual std::string getId() = 0;
-    virtual Graph getMoves() = 0;
-    virtual int getValue() = 0;
+    AbsPiece();
+    ~AbsPiece();
+    virtual std::string getId() const = 0;
+    virtual Tree getMoves() const = 0;
+    virtual int getValue() const = 0;
 
 private:
-    std::string id;
-    Graph *moves;
-    int value;
+    Tree *moves_;
+    int value_;
+
 };
 
 

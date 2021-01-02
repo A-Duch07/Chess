@@ -3,3 +3,11 @@
 //
 
 #include "AbsPiece.h"
+
+AbsPiece::AbsPiece() {
+
+}
+
+AbsPiece::~AbsPiece() {
+
+}
