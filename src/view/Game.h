@@ -2,6 +2,7 @@
 // Created by fredericksimard on 2020-12-30.
 //
 
+#pragma once
 #ifndef CHESS_GAME_H
 #define CHESS_GAME_H
 #define SDL_MAIN_HANDLED

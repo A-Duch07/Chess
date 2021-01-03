@@ -2,6 +2,7 @@
 // Created by Anthony on 12/30/2020.
 //
 
+#pragma once
 #ifndef CHESS_ABSPIECE_H
 #define CHESS_ABSPIECE_H
 

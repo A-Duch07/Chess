@@ -2,6 +2,7 @@
 // Created by Alexandre Touchette on 2020-12-31.
 //
 
+#pragma once
 #ifndef CHESS_SQUARE_H
 #define CHESS_SQUARE_H
 #define SDL_MAIN_HANDLED
