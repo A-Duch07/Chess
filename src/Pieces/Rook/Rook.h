@@ -2,17 +2,17 @@
 // Created by Alexandre on 2021-01-02
 //
 
-#ifndef CHESS_ROO_H
-#define CHESS_ROO_H
+#ifndef CHESS_ROOK_H
+#define CHESS_ROOK_H
 
 #include "../AbsPiece.h"
 
 class Rook : public AbsPiece{
 public:
-    Rook();
+    Rook(Tree *moves, int value, std::string id);
     ~Rook();
     std::string getId() const;
-    Tree getMoves() const;
+    Tree getMoves() const override;
     int getValue() const;
 
 private:
@@ -23,4 +23,4 @@ private:
 };
 
 
-#endif //CHESS_ROO_H
+#endif //CHESS_ROOK_H
