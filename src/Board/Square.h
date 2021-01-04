@@ -14,12 +14,12 @@ class AbsPiece;
 
 class Square{
     public:
-        Square(const AbsPiece& piece, int row, int col);
+        Square(AbsPiece *piece, int row, int col);
 
-        bool GetAvailability() const;
-        int GetRow() const;
-        char GetCol() const;
-        std::string GetPosition() const;
+        bool hasPiece() const;
+        int getRow() const;
+        int getCol() const;
+        char* getId() const;
         
     private:
         AbsPiece *piece_;
