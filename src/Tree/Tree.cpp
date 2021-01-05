@@ -4,9 +4,9 @@
 
 #include "Tree.h"
 
-Tree::Tree() : root_(nullptr), moves_(new std::unordered_map<char*, Square*>) {}
+Tree::Tree() : root_(nullptr), moves_(new std::unordered_map<std::string, Square*>) {}
 
-Tree::Tree(Square *root) : root_(root), moves_(new std::unordered_map<char*, Square*>) {}
+Tree::Tree(Square *root) : root_(root), moves_(new std::unordered_map<std::string, Square*>) {}
 
 Tree::~Tree() {
     for(auto & move : *moves_){
@@ -19,11 +19,11 @@ Tree::~Tree() {
     delete root_;
 }
 
-Square *Tree::getRoot() const{
+Square *Tree::getRoot() const {
     return root_;
 }
 
-std::unordered_map<char*, Square *> *Tree::getMoves() const{
+std::unordered_map<std::string, Square *> *Tree::getMoves() const {
     return moves_;
 }
 
@@ -31,7 +31,7 @@ void Tree::setRoot(Square *root) {
     root_ = root;
 }
 
-void Tree::setMoves(std::unordered_map<char*, Square *> *moves) {
+void Tree::setMoves(std::unordered_map<std::string, Square *> *moves) {
     moves_ = moves;
 }
 

@@ -10,22 +10,26 @@
 class AbsPiece;
 
 #include <string>
+#include <charconv>
 #include "Pieces/AbsPiece.h"
 
 class Square{
     public:
         Square(AbsPiece *piece, int row, int col);
+        ~Square();
 
+        // Getters and setters
         bool hasPiece() const;
         int getRow() const;
         int getCol() const;
-        char* getId() const;
+        std::string getId() const;
+        void setPiece(AbsPiece *piece);
         
     private:
         AbsPiece *piece_;
         int row_;
         int col_;
-        char *id_;
+        std::string id_;
 
 };
 

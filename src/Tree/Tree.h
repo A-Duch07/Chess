@@ -14,14 +14,14 @@ class Tree {
 public:
     // Constructors and destructor
     Tree();
-    Tree(Square *root);
+    explicit Tree(Square *root);
     ~Tree();
 
     // Getters and setters
     Square* getRoot() const;
-    std::unordered_map<char*, Square*>* getMoves() const;
+    std::unordered_map<std::string, Square*>* getMoves() const;
     void setRoot(Square* root);
-    void setMoves(std::unordered_map<char*, Square*>* moves);
+    void setMoves(std::unordered_map<std::string, Square*>* moves);
 
     // Methods
     // Should probably consider this : https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)#Rule_of_Three
@@ -32,7 +32,7 @@ public:
 
 private:
     Square *root_;
-    std::unordered_map<char*, Square*> *moves_;
+    std::unordered_map<std::string, Square*> *moves_;
 
 };
 
