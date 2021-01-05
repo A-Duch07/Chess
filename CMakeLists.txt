@@ -18,7 +18,7 @@ add_executable(Chess ${Chess_SOURCES})
 #add_executable(Chess WIN32 src/main.cpp src/view/Game.cpp src/view/Game.h src/Pieces/AbsPiece.cpp src/Pieces/AbsPiece.h src/Board/Square.h src/Board/Square.cpp src/Tree/Tree.h src/Tree/Tree.cpp)
 target_link_libraries(Chess ${SDL2_LIBRARIES})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 
