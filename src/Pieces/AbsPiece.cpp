@@ -4,7 +4,7 @@
 
 #include "AbsPiece.h"
 
-AbsPiece::AbsPiece(Tree *moves, int value) : moves_(moves), value_(value) {}
+AbsPiece::AbsPiece(Tree *moves, int value, int row, int col) : moves_(moves), value_(value), row_(row), col_(col) {}
 
 AbsPiece::~AbsPiece() {
     delete moves_;
@@ -16,4 +16,12 @@ Tree AbsPiece::getMoves() const {
 
 int AbsPiece::getValue() const {
     return value_;
+}
+
+int AbsPiece::getRow() const {
+    return row_;
+}
+
+int AbsPiece::getCol() const {
+    return col_;
 }

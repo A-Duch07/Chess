@@ -12,28 +12,28 @@
 #include <string_view>
 
 class Tree {
-public:
-    // Constructors and destructor
-    Tree();
-    explicit Tree(Square *root);
-    ~Tree();
+    public:
+        // Constructors and destructor
+        Tree();
+        explicit Tree(Square *root);
+        ~Tree();
 
-    // Getters and setters
-    Square* getRoot() const;
-    std::unordered_map<std::string_view, Square*>* getMoves() const;
-    void setRoot(Square* root);
-    void setMoves(std::unordered_map<std::string_view, Square*>* moves);
+        // Getters and setters
+        Square* getRoot() const;
+        std::unordered_map<std::string_view, Square*>* getMoves() const;
+        void setRoot(Square* root);
+        void setMoves(std::unordered_map<std::string_view, Square*>* moves);
 
-    // Methods
-    // Should probably consider this : https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)#Rule_of_Three
-    void add(Square *node);
-    void erase(const Square& node);
-    Square* find(const Square& node) const; // Maybe should be const not to modify the tree in anyway when trying to find a node
-    void clear();
+        // Methods
+        // Should probably consider this : https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)#Rule_of_Three
+        void add(Square *node);
+        void erase(const Square& node);
+        Square* find(const Square& node) const; // Maybe should be const not to modify the tree in anyway when trying to find a node
+        void clear();
 
-private:
-    Square *root_;
-    std::unordered_map<std::string_view, Square*> *moves_;
+    private:
+        Square *root_;
+        std::unordered_map<std::string_view, Square*> *moves_;
 
 };
 

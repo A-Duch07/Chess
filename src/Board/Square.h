@@ -15,6 +15,7 @@ class AbsPiece;
 
 class Square{
     public:
+        // Constructors and destructor
         Square(AbsPiece *piece, int row, int col);
         ~Square();
 
@@ -27,8 +28,7 @@ class Square{
         
     private:
         AbsPiece *piece_;
-        int row_;
-        int col_;
+        int row_, col_;
         std::string id_;
 
 };

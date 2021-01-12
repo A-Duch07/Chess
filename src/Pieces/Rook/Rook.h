@@ -9,7 +9,7 @@
 
 class Rook : public AbsPiece{
 public:
-    Rook(Tree *moves, int value);
+    Rook(Tree *moves, int value, int row, int col);
     ~Rook();
     void calculateMoves() override;
 

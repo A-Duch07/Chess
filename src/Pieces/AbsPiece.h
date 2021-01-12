@@ -15,16 +15,22 @@ class Square;
 
 
 class AbsPiece {
-public:
-    AbsPiece(Tree *moves, int value);
-    ~AbsPiece();
-    Tree getMoves() const;
-    int getValue() const;
-    virtual void calculateMoves() = 0;
+    public:
+        // Constructors and destructor
+        AbsPiece(Tree *moves, int value, int row, int col);
+        ~AbsPiece();
 
-private:
-    Tree *moves_;
-    const int value_;
+        // Getters
+        Tree getMoves() const;
+        int getValue() const;
+        int getRow() const;
+        int getCol() const;
+        virtual void calculateMoves() = 0;
+
+    private:
+        Tree *moves_;
+        const int value_;
+        int row_, col_;
 
 };
 
