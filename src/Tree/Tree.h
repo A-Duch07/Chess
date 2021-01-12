@@ -33,7 +33,7 @@ class Tree {
 
     private:
         Square *root_;
-        std::unordered_map<std::string_view, Square*> *moves_;
+        std::unordered_map<std::string_view, Square*> *nodes_;
 
 };
 

@@ -4,18 +4,16 @@
 
 #include "Tree.h"
 
-Tree::Tree() : root_(nullptr), moves_(new std::unordered_map<std::string_view, Square*>) {}
+Tree::Tree() : root_(nullptr), nodes_(new std::unordered_map<std::string_view, Square*>) {}
 
-Tree::Tree(Square *root) : root_(root), moves_(new std::unordered_map<std::string_view, Square*>) {}
+Tree::Tree(Square *root) : root_(root), nodes_(new std::unordered_map<std::string_view, Square*>) {}
 
 Tree::~Tree() {
-    for(auto & move : *moves_){
+    for(auto & move : *nodes_){
         delete move.second;
     }
-    // Dont know if these lines are necessary (16-17)
-    moves_->erase(moves_->begin(),moves_->end());
-    moves_->clear();
-    delete moves_;
+    clear();
+    delete nodes_;
     delete root_;
 }
 
@@ -24,7 +22,7 @@ Square *Tree::getRoot() const {
 }
 
 std::unordered_map<std::string_view, Square *> *Tree::getMoves() const {
-    return moves_;
+    return nodes_;
 }
 
 void Tree::setRoot(Square *root) {
@@ -32,26 +30,26 @@ void Tree::setRoot(Square *root) {
 }
 
 void Tree::setMoves(std::unordered_map<std::string_view, Square *> *moves) {
-    moves_ = moves;
+    nodes_ = moves;
 }
 
 void Tree::add(Square *node) {
-    moves_->insert(std::make_pair(node->getId(), node));
+    nodes_->insert(std::make_pair(node->getId(), node));
 }
 
 void Tree::erase(const Square &node) {
-    moves_->erase(node.getId());
+    nodes_->erase(node.getId());
 }
 
 Square* Tree::find(const Square &node) const {
     try{
-        return moves_->at(node.getId());
+        return nodes_->at(node.getId());
     } catch (std::out_of_range& outOfRange) {
         return nullptr;
     }
 }
 
 void Tree::clear() {
-    moves_->erase(moves_->begin(), moves_->end());
-    moves_->clear();
+    nodes_->erase(nodes_->begin(), nodes_->end());
+    nodes_->clear();
 }
