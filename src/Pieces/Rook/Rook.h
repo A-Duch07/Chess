@@ -9,16 +9,12 @@
 
 class Rook : public AbsPiece{
 public:
-    Rook(Tree *moves, int value, std::string id);
+    Rook(Tree *moves, int value);
     ~Rook();
-    std::string getId() const;
-    Tree getMoves() const override;
-    int getValue() const;
+    void calculateMoves() override;
 
 private:
-    Tree *moves_;
-    int value_;
-    std::string id_;
+    static const int value_ = 5;
 
 };
 

@@ -4,10 +4,16 @@
 
 #include "AbsPiece.h"
 
-AbsPiece::AbsPiece() {
-
-}
+AbsPiece::AbsPiece(Tree *moves, int value) : moves_(moves), value_(value) {}
 
 AbsPiece::~AbsPiece() {
+    delete moves_;
+}
 
+Tree AbsPiece::getMoves() const {
+    return *moves_;
+}
+
+int AbsPiece::getValue() const {
+    return value_;
 }

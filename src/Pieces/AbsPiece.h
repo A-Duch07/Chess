@@ -16,16 +16,15 @@ class Square;
 
 class AbsPiece {
 public:
-    AbsPiece();
+    AbsPiece(Tree *moves, int value);
     ~AbsPiece();
-    virtual std::string getId() const = 0;
-    virtual Tree getMoves() const = 0;
-    virtual int getValue() const = 0;
-    virtual int calculateMoves() = 0;
+    Tree getMoves() const;
+    int getValue() const;
+    virtual void calculateMoves() = 0;
 
 private:
     Tree *moves_;
-    int value_;
+    const int value_;
 
 };
 
