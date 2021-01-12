@@ -8,14 +8,11 @@
 #include "../AbsPiece.h"
 
 class Rook : public AbsPiece{
-public:
-    Rook(Tree *moves, int value, int row, int col);
-    ~Rook();
-    void calculateMoves() override;
-
-private:
-    static const int value_ = 5;
-
+    public:
+        Rook(Tree *moves, int value, int row, int col);
+        ~Rook();
+        void calculateMoves() override;
+        
 };
 
 

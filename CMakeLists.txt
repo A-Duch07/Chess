@@ -13,7 +13,7 @@ include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(src)
 file(GLOB_RECURSE uMario_SOURCES "uNext/*.cpp")
 file(GLOB_RECURSE Chess_SOURCES "src/*.cpp")
-add_executable(Chess ${Chess_SOURCES})
+add_executable(Chess ${Chess_SOURCES} src/Board/Board.cpp src/Board/Board.h)
 
 #add_executable(Chess WIN32 src/main.cpp src/view/Game.cpp src/view/Game.h src/Pieces/AbsPiece.cpp src/Pieces/AbsPiece.h src/Board/Square.h src/Board/Square.cpp src/Tree/Tree.h src/Tree/Tree.cpp)
 target_link_libraries(Chess ${SDL2_LIBRARIES})
